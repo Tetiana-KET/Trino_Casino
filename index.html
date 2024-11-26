@@ -9,7 +9,52 @@
     <title>Trino Casino</title>
   </head>
   <body>
-    <div class="site-wrapper"></div>
+    <div class="site-wrapper">
+      <header class="header">
+        <h1 class="header__logo-wrap">
+          <img src="./src/assets/icons/logo.svg" alt="Trino Casino" />
+        </h1>
+      </header>
+      <main class="main">
+        <div class="main__container">
+          <div class="main__girl-img-wrap">
+            <img src="./src/assets/img/girl.png" alt="an image of a girl" />
+          </div>
+          <div class="main__content">
+            <div class="wheel">
+              <div class="wheel__stone-wrap">
+                <picture>
+                  <source srcset="./src/assets/img/stone375.png" type="image/png" media="(max-width: 375px)" />
+                  <source srcset="./src/assets/img/stone768.png" type="image/png" media="(max-width: 768px)" />
+                  <source srcset="./src/assets/img/stone.png" type="image/jpeg" />
+                  <img src="./src/assets/img/stone.png" alt="an image of a stone" />
+                </picture>
+              </div>
+              <div class="wheel__wheel-wrap">
+                <picture>
+                  <source srcset="./src/assets/img/wheel375.png" type="image/png" media="(max-width: 375px)" />
+                  <source srcset="./src/assets/img/wheel768.png" type="image/png" media="(max-width: 768px)" />
+                  <source srcset="./src/assets/img/wheel.png" type="image/jpeg" />
+                  <img src="./src/assets/img/wheel.png" alt="an image of a wheel" />
+                </picture>
+              </div>
+              <div class="wheel__arrow-wrap">
+                <picture>
+                  <source srcset="./src/assets/img/Arrow375.png" type="image/png" media="(max-width: 375px)" />
+                  <source srcset="./src/assets/img/Arrow768.png" type="image/png" media="(max-width: 768px)" />
+                  <source srcset="./src/assets/img/Arrow.png" type="image/jpeg" />
+                  <img src="./src/assets/img/Arrow.png" alt="an image of a Arrow" />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="main__major-img-wrap">
+            <img src="./src/assets/img/major.png" alt="an image of a major" />
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
     <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
