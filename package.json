@@ -1,0 +1,29 @@
+{
+  "name": "trino-casino",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && npx gh-pages -d dist -e trino-casino",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "ci:format": "prettier ./src --check",
+    "format": "prettier ./src --write",
+    "formatAll": "npm run lint:fix && npm run format"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "gh-pages": "^6.2.0",
+    "prettier": "3.4.0",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.10"
+  }
+}
