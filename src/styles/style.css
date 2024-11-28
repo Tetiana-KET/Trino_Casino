@@ -1,9 +1,15 @@
 .site-wrapper {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   overflow: hidden;
   background: url('../assets/img/bg.jpg') center / cover no-repeat;
+}
+
+.header {
+  position: absolute;
 }
 
 .header__logo-wrap {
@@ -18,50 +24,56 @@
 
 .main {
   flex: 1;
-  display: flex;
-}
-.main__container {
-  display: flex;
-  position: relative;
-  flex: 1;
-}
-.main__girl-img-wrap {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-}
-.main__content {
-  display: flex;
-  flex: 1;
   width: 100%;
-  height: 87%;
+}
+
+.main__imgs-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.main__girl-img-wrap,
+.main__major-img-wrap {
+  flex: 0 1 auto;
+  max-width: 30.625%;
 }
 
 .wheel {
   display: flex;
-  flex: 1;
-  height: 100%;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 1287px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wheel picture {
+  display: block;
 }
 
 .wheel__stone-wrap {
   position: absolute;
 }
+
 .wheel__wheel-wrap {
   position: absolute;
 }
+
 .wheel__arrow-wrap {
   position: absolute;
-  top: -33px;
-  transform: translateX(10%);
-}
-
-.main__major-img-wrap {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  bottom: 0;
+  top: 8%;
+  right: 50%;
+  transform: translateX(60%);
+  z-index: 5;
 }
 
 @supports (background-image: url('../assets/img/bg.webp')) {
