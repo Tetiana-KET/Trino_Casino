@@ -1,4 +1,4 @@
-import { PaymentItem } from '../components/paymentItem';
+import { PaymentItem } from '../components/PaymentItem';
 import { paymentsObg } from '../consts/paymentsObj';
 
 export function renderPaymentItems() {
