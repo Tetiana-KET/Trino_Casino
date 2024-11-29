@@ -1,4 +1,4 @@
-export function disableButton() {
-  const spinButton = document.querySelector('.wheel__button') as HTMLButtonElement;
+export function disableButton(id: string) {
+  const spinButton = document.getElementById(`${id}`) as HTMLButtonElement;
   spinButton.disabled = true;
 }

@@ -7,7 +7,7 @@ import { getRandomIntInclusive } from '../utils/getRandomIntInclusive';
 let previousPosition = 0;
 
 export function spinTheWheel() {
-  disableButton();
+  disableButton('spinWheelButton');
   const fortuneWheel = document.getElementById('fortuneWheel') as HTMLElement;
 
   // const index = getRandomIntInclusive(0, wheelSectors.length - 1) ?? 1;//  in case we want eny sector to win
@@ -21,5 +21,7 @@ export function spinTheWheel() {
   fortuneWheel.style.transition = 'transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.99)';
   fortuneWheel.style.transform = `rotate(${winAngle}deg)`;
 
-  fortuneWheel.addEventListener('transitionend', enableButton);
+  fortuneWheel.addEventListener('transitionend', () => {
+    enableButton('spinWheelButton');
+  });
 }
