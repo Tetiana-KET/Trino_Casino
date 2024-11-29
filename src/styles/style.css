@@ -11,7 +11,7 @@
 }
 
 .site-wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -154,6 +154,21 @@
   z-index: 6;
 }
 
+.footer__payments-container {
+  padding: 0 10px 0 18px;
+}
+
+.footer .payments {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.payments__item {
+  flex: 1;
+  transition: all 0.5s;
+}
+
 @supports (background-image: url('../assets/img/bg.webp')) {
   .site-wrapper {
     background-image: url('../assets/img/bg.webp');
@@ -190,5 +205,10 @@
     --gradient-color-2: var(--hover-color-2);
     --gradient-color-3: var(--hover-color-3);
     box-shadow: var(--button-hover);
+  }
+
+  .payments__item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
   }
 }

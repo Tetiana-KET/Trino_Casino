@@ -1,0 +1,16 @@
+export const paymentsObg = {
+  ApplePay: 'src/assets/icons/payments/ApplePay.svg',
+  GooglePay: 'src/assets/icons/payments/GooglePay.svg',
+  eZeeWallet: 'src/assets/icons/payments/eZeeWallet.svg',
+  Visa: 'src/assets/icons/payments/Visa.svg',
+  Mastercard: 'src/assets/icons/payments/Mastercard.svg',
+  Mifinity: 'src/assets/icons/payments/Mifinity.svg',
+  Skrill: 'src/assets/icons/payments/Skrill.svg',
+  Neteller: 'src/assets/icons/payments/Neteller.svg',
+  Paysafecard: 'src/assets/icons/payments/Paysafecard.svg',
+  ImpayaN26: 'src/assets/icons/payments/ImpayaN26.svg',
+  Flexepin: 'src/assets/icons/payments/Flexepin.svg',
+  Binance: 'src/assets/icons/payments/Binance.svg',
+  Crypto: 'src/assets/icons/payments/Crypto.svg',
+  Blik: 'src/assets/icons/payments/Blik.svg',
+};
