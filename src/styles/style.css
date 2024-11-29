@@ -118,6 +118,11 @@
   cursor: pointer;
 }
 
+.wheel__button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 @keyframes backgroundShimmer {
   0% {
     background-position: 0% 50%;

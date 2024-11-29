@@ -1,10 +1,13 @@
 import { MAX_TURN_COUNT } from '../consts/turnCount';
 import { wheelSectors } from '../consts/wheelSectors';
+import { disableButton } from '../utils/disableButton';
+import { enableButton } from '../utils/enableButton';
 import { getRandomIntInclusive } from '../utils/getRandomIntInclusive';
 
 let previousPosition = 0;
 
 export function spinTheWheel() {
+  disableButton();
   const fortuneWheel = document.getElementById('fortuneWheel') as HTMLElement;
 
   // const index = getRandomIntInclusive(0, wheelSectors.length - 1) ?? 1;//  in case we want eny sector to win
@@ -17,4 +20,6 @@ export function spinTheWheel() {
 
   fortuneWheel.style.transition = 'transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.99)';
   fortuneWheel.style.transform = `rotate(${winAngle}deg)`;
+
+  fortuneWheel.addEventListener('transitionend', enableButton);
 }
