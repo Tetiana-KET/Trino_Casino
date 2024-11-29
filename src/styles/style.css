@@ -1,3 +1,15 @@
+:root {
+  --black: #101010;
+  --gradient-color-1: #ffad00;
+  --gradient-color-2: #f3c35b;
+  --gradient-color-3: #f9d404;
+  --hover-color-1: #fc8403;
+  --hover-color-2: #f3e655;
+  --hover-color-3: #ffaa00;
+  --button-hover: 0 5px 15px rgba(255, 200, 50, 0.4);
+  --font-family: 'Arial', sans-serif;
+}
+
 .site-wrapper {
   height: 100vh;
   display: flex;
@@ -13,7 +25,7 @@
 }
 
 .header__logo-wrap {
-  padding: 20px 10px 0;
+  padding: 20px 0px 0px 20px;
   display: flex;
   justify-content: center;
 }
@@ -66,6 +78,7 @@
 
 .wheel__wheel-wrap {
   position: absolute;
+  max-width: 53.529868%;
 }
 
 .wheel__arrow-wrap {
@@ -74,6 +87,71 @@
   right: 50%;
   transform: translateX(60%);
   z-index: 5;
+}
+
+.wheel__button-wrap {
+  position: absolute;
+  height: 90px;
+  width: 100%;
+  transform: translateY(-127%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wheel__button {
+  width: 469px;
+  height: 90px;
+  background: linear-gradient(45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
+  background-size: 300%;
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 29px;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--black);
+  border: none;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  animation: backgroundShimmer 3s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes backgroundShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wheel__button::before,
+.wheel__button::after {
+  content: '';
+  position: absolute;
+  width: 87px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: url('../assets/icons/button-pattern.svg');
+}
+
+.wheel__button::before {
+  transform: rotate(180deg);
+  left: 0;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 77px;
+  bottom: 0;
+  z-index: 6;
 }
 
 @supports (background-image: url('../assets/img/bg.webp')) {
@@ -103,5 +181,14 @@
     .site-wrapper {
       background-image: url('../assets/img/bg375.webp');
     }
+  }
+}
+
+@media (hover: hover) {
+  .wheel__button:hover {
+    --gradient-color-1: var(--hover-color-1);
+    --gradient-color-2: var(--hover-color-2);
+    --gradient-color-3: var(--hover-color-3);
+    box-shadow: var(--button-hover);
   }
 }
