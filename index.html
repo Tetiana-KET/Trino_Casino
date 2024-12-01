@@ -10,14 +10,16 @@
     <title>Trino Casino</title>
   </head>
   <body>
-    <div class="modal">
+    <div class="modal" id="takeBonusModal">
       <div class="modal__overlay"></div>
       <div class="modal__content popup">
         <div class="popup__overlay">
           <div class="popup__content">
             <h2 class="popup__title">Congratulations! </h2>
             <p class="popup__text">You won:</p>
-            <p class="popup__message">Bonus Pack 300% up to €3000 + 300 FS on first 4 deposits</p>
+            <p class="popup__message" id="popupBonusMessage">
+              Bonus Pack 300% up to €3000 + 300 FS on first 4 deposits
+            </p>
             <div class="popup_button-wrap" id="popupButtonContainer"></div>
           </div>
         </div>

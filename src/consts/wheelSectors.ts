@@ -3,13 +3,13 @@ export const wheelSectors = [
     id: 1,
     name: '300% до €3000 + 300 FS',
     description: 'Bonus Pack 300% up to €3000 + 300 FS on first 4 deposits',
-    positionStart: 72,
+    positionStart: 289,
   },
   {
     id: 2,
     name: '330% до €4000',
     description: 'Bonus Pack 330% up to €4000 on first 4 deposits',
-    positionStart: 289,
+    positionStart: 72,
   },
   {
     id: 3,
