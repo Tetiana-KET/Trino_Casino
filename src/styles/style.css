@@ -19,6 +19,7 @@
 
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 .modal {
@@ -134,10 +135,6 @@ body {
   background: url('../assets/img/bg.jpg') center / 100% 100% no-repeat;
 }
 
-.header {
-  position: absolute;
-}
-
 .header__logo-wrap {
   padding: 20px 0px 0px 20px;
   display: flex;
@@ -151,14 +148,15 @@ body {
 .main {
   flex: 1;
   width: 100%;
+  position: relative;
+  margin-top: -7%;
 }
 
 .main__imgs-container {
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 50%;
-  transform: translateY(50%);
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   z-index: 2;
@@ -167,19 +165,14 @@ body {
 .main__girl-img-wrap,
 .main__major-img-wrap {
   flex: 0 1 auto;
-  max-width: 30.625%;
+  max-width: 35%;
 }
 
 .wheel {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  height: 100%;
-  width: 67%;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
 }
 
 .wheel picture {
@@ -187,7 +180,7 @@ body {
 }
 
 .wheel__stone-wrap {
-  position: absolute;
+  position: relative;
 }
 
 .wheel__wheel-wrap {
@@ -196,7 +189,7 @@ body {
 }
 
 .wheel__arrow-wrap {
-  width: 13.58%;
+  max-width: 13%;
   position: absolute;
   top: 8%;
   right: 50%;
@@ -208,7 +201,7 @@ body {
   position: absolute;
   height: 90px;
   width: 100%;
-  bottom: 0;
+  top: 0;
   transform: translateY(-111%);
   display: flex;
   justify-content: center;
@@ -269,10 +262,9 @@ body {
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: 6;
+  position: relative;
+  margin-top: -100px;
+  z-index: 10;
 }
 
 .footer__payments-container {
@@ -283,7 +275,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  row-gap: 25px;
+  column-gap: 15px;
 }
 
 .payments__item {
@@ -326,13 +319,15 @@ body {
 
   .wheel {
     width: 100%;
-    height: 80%;
+    height: 60vh;
+    top: 40%;
   }
 
   .wheel__wheel-wrap {
-    margin-top: 60px;
-    max-width: 100%;
+    margin-top: 7.8125%;
     transform-origin: center center;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
   .wheel__arrow-wrap {
@@ -343,14 +338,20 @@ body {
   }
 
   .wheel__button-wrap {
-    transform: translateY(-150%);
+    transform: translateY(-81%);
   }
 
   .footer {
     padding: 60px 0;
   }
 
+  .footer__payments-container {
+    padding: 0px;
+  }
+
   .footer .payments {
+    row-gap: 35px;
+    column-gap: 30px;
   }
 }
 
