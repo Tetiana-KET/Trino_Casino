@@ -198,6 +198,81 @@ body {
   z-index: 5;
 }
 
+.wheel__glow {
+  position: absolute;
+  transform-origin: center center;
+  animation: glow 1s infinite alternate;
+}
+
+.wheel__glow img {
+  display: block;
+}
+
+.glow-1 {
+  top: 30.5%;
+  left: 67.5%;
+}
+
+.glow-1 img {
+  transform: rotate(111deg);
+}
+
+.glow-2 {
+  top: 48%;
+  left: 71.5%;
+}
+
+.glow-2 img {
+  transform: rotate(145deg);
+}
+
+.glow-3 {
+  top: 34.5%;
+  right: 73.5%;
+}
+
+.glow-3 img {
+  transform: rotate(145deg);
+}
+
+.glow-4 {
+  top: 29%;
+  right: 51%;
+}
+
+.glow-4 img {
+  transform: rotate(185deg);
+}
+
+.glow-5 {
+  top: 68%;
+  right: 55.5%;
+}
+
+.glow-5 img {
+  transform: rotate(76deg);
+}
+
+.glow-6 {
+  top: 54%;
+  right: 39%;
+}
+
+.glow-6 img {
+  transform: rotate(40deg);
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.4;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
 .wheel__button-wrap {
   position: absolute;
   height: 90px;
