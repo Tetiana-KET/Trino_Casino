@@ -146,7 +146,6 @@ body {
 }
 
 .main {
-  flex: 1;
   width: 100%;
   position: relative;
   margin-top: -7%;
@@ -317,13 +316,17 @@ body {
     padding: 31px 0px 0px 0px;
   }
 
+  .main {
+    margin-top: -18%;
+  }
+
   .wheel {
     width: 100%;
-    height: 60vh;
     top: 40%;
   }
 
   .wheel__wheel-wrap {
+    max-width: 84%;
     margin-top: 7.8125%;
     transform-origin: center center;
     border-radius: 50%;
@@ -331,7 +334,7 @@ body {
   }
 
   .wheel__arrow-wrap {
-    width: 18.6%;
+    max-width: 18.6%;
     top: 13%;
     right: 51%;
     transform: translateX(57%);
@@ -350,8 +353,21 @@ body {
   }
 
   .footer .payments {
-    row-gap: 35px;
-    column-gap: 30px;
+    row-gap: clamp(18.5px, 5vw, 35px);
+    column-gap: clamp(8px, 4vw, 30px);
+  }
+
+  .payments__item {
+    width: 15.5%;
+  }
+
+  .wheel__button-wrap {
+    height: auto;
+  }
+
+  .button {
+    height: clamp(51px, calc(51px + (90 - 51) * ((100vw - 375px) / (768 - 375))), 90px);
+    font-size: clamp(16px, calc(16px + (29 - 16) * ((100vw - 375px) / (768 - 375))), 29px);
   }
 }
 
@@ -370,6 +386,34 @@ body {
     height: 335px;
     padding-top: 0;
     background: url('../assets/img/popup-bg375.png') center / 100% 100% no-repeat;
+  }
+
+  .header__logo-wrap {
+    padding: 14px 0px 0px 0px;
+  }
+
+  .main {
+    margin-top: -45%;
+  }
+
+  .wheel__wheel-wrap {
+    max-width: 91%;
+    margin-top: 6%;
+    margin-left: 2%;
+  }
+
+  .wheel__arrow-wrap {
+    max-width: 25.6%;
+    top: 15%;
+    transform: translateX(58%);
+  }
+
+  .footer {
+    padding: 26px 0;
+  }
+
+  .wheel__button-wrap {
+    transform: translateY(-129%);
   }
 }
 
