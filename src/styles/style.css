@@ -11,7 +11,7 @@
   --modal-background: rgba(9, 13, 60, 0.53);
   --popup-blue-blur: rgba(0, 189, 230, 0.58);
   --popup-arrow-gradient: linear-gradient(180deg, #fcb001 0%, #cf0 100%);
-  --popup-arrow-shadow: 0 4px 50px 0 rgba(255, 255, 255, 0.93);
+  --popup-arrow-shadow: 1px 0px 45px 35px rgba(255, 255, 255, 0.93);
   --button-hover: 0 5px 15px rgba(255, 200, 50, 0.4);
   --font-family: 'Arial', sans-serif;
   --font-popup: 'Anton', sans-serif;
@@ -61,6 +61,38 @@ body {
   max-width: 1200px;
 }
 
+.popup__arrow {
+  width: 20%;
+  aspect-ratio: 16/4;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popup__arrow:first-of-type {
+  transform: translateX(-50%) rotateX(180deg);
+  top: 0;
+}
+
+.popup__arrow:last-of-type {
+  bottom: 1%;
+  width: 18%;
+}
+
+.popup__arrow::before {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--yellow-color);
+  opacity: 0.3;
+  box-shadow: var(--popup-arrow-shadow);
+}
+
 .popup__overlay {
   position: relative;
   height: 800px;
@@ -68,8 +100,6 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-top: 155px;
-  margin-bottom: clamp(55px, 2vw, 155px);
   background:
     url('../assets/img/popup-bg-lines.png') center / 93% 97% no-repeat,
     url('../assets/img/popup-bg.png') center / 85% 87% no-repeat;
@@ -82,15 +112,19 @@ body {
   height: 87%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-49%, -50%);
   background: var(--popup-blue-blur);
-  filter: blur(55px);
+  filter: blur(45px);
   z-index: -1;
 }
 
 .popup__content {
   font-family: var(--font-popup);
   color: var(--yellow-color);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
 }
 
 .popup__title {
@@ -116,13 +150,19 @@ body {
 .popup__message {
   width: 92%;
   max-width: 622px;
-  margin: auto;
   font-weight: 400;
   font-size: 48px;
   font-size: clamp(23px, 23px + (48 - 23) * ((100vw - 375px) / (1920 - 375)), 48px);
   line-height: 125%;
   margin-bottom: 60px;
   margin-bottom: clamp(30px, 3vw, 60px);
+}
+
+.popup_button-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-wrapper {
