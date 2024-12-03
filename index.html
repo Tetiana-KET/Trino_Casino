@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/wheel.svg" />
+    <link rel="stylesheet" href="./src/styles/normalize.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <link rel="stylesheet" href="./src/styles/adaptive.css" />
+    <link href="https://fonts.googleapis.com/css?family=Anton:regular" rel="stylesheet" />
+    <link rel="preload" href="./src/assets/img/bg.webp" as="image" importance="high" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trino Casino</title>
+  </head>
+  <body>
+    <div class="modal" id="takeBonusModal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content popup">
+        <div class="popup__arrow">
+          <svg width="240" height="110" viewBox="0 0 215 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_1_14137)">
+              <path d="M107.5 74L50.7753 46.25L164.225 46.25L107.5 74Z" fill="url(#paint0_linear_1_14137)" />
+            </g>
+            <defs>
+              <filter id="filter0_d_1_14137" x="0" y="0" width="215" height="120" filterUnits="userSpaceOnUse">
+                <feOffset dx="4" dy="4" />
+                <feGaussianBlur in="offsetBlur" stdDeviation="10" result="blurredOffset" />
+                <feColorMatrix type="matrix" values="0 10px 50px 0 rgba(255, 255, 255, 0.93)" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+              </filter>
+              <linearGradient
+                id="paint0_linear_1_14137"
+                x1="107.5"
+                y1="74"
+                x2="107.5"
+                y2="37"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#FCB001" />
+                <stop offset="1" stop-color="#CCFF00" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="popup__overlay">
+          <div class="popup__content">
+            <h2 class="popup__title">Congratulations! </h2>
+            <p class="popup__text">You won:</p>
+            <p class="popup__message" id="popupBonusMessage">
+              Bonus Pack 300% up to €3000 + 300 FS on first 4 deposits
+            </p>
+            <div class="popup_button-wrap" id="popupButtonContainer"></div>
+          </div>
+        </div>
+        <div class="popup__arrow">
+          <svg width="215" height="95" viewBox="0 0 215 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_1_14137)">
+              <path d="M107.5 74L50.7753 46.25L164.225 46.25L107.5 74Z" fill="url(#paint0_linear_1_14137)" />
+            </g>
+            <defs>
+              <filter id="filter0_d_1_14137" x="0" y="0" width="215" height="120" filterUnits="userSpaceOnUse">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feOffset dx="4" dy="4" />
+                <feGaussianBlur in="offsetBlur" stdDeviation="10" result="blurredOffset" />
+                <feColorMatrix type="matrix" values="0 10px 50px 0 rgba(255, 255, 255, 0.93)" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+              </filter>
+              <linearGradient
+                id="paint0_linear_1_14137"
+                x1="107.5"
+                y1="74"
+                x2="107.5"
+                y2="37"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#FCB001" />
+                <stop offset="1" stop-color="#CCFF00" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="site-wrapper">
+      <header class="header">
+        <h1 class="header__logo-wrap">
+          <picture>
+            <source srcset="./src/assets/icons/logo.svg" type="image/svg+xml" media="(min-width: 376px)" />
+            <source srcset="./src/assets/icons/logo375.svg" type="image/svg+xml" media="(max-width: 375px)" />
+            <img src="./src/assets/icons/logo.svg" alt="Trino Casino Logo" />
+          </picture>
+        </h1>
+      </header>
+      <main class="main">
+        <div class="main__imgs-container">
+          <div class="main__girl-img-wrap">
+            <img src="./src/assets/img/girl.png" alt="an image of a girl" />
+          </div>
+          <div class="main__major-img-wrap">
+            <img src="./src/assets/img/major.png" alt="an image of a major" />
+          </div>
+        </div>
+
+        <div class="main__wheel wheel">
+          <div class="wheel__stone-wrap">
+            <picture>
+              <source srcset="./src/assets/img/stone375.png" type="image/png" media="(max-width: 375px)" />
+              <source srcset="./src/assets/img/stone768.png" type="image/png" media="(max-width: 768px)" />
+              <source srcset="./src/assets/img/stone.png" type="image/png" />
+              <img src="./src/assets/img/stone.png" alt="an image of a stone" />
+            </picture>
+            <div class="wheel__arrow-wrap">
+              <picture>
+                <source srcset="./src/assets/img/Arrow375.png" type="image/png" media="(max-width: 375px)" />
+                <source srcset="./src/assets/img/Arrow768.png" type="image/png" media="(max-width: 768px)" />
+                <source srcset="./src/assets/img/Arrow.png" type="image/png" />
+                <img src="./src/assets/img/Arrow.png" alt="an image of a Arrow" />
+              </picture>
+            </div>
+          </div>
+          <div class="wheel__wheel-wrap" id="fortuneWheel">
+            <picture>
+              <source srcset="./src/assets/img/wheel375.png" type="image/png" media="(max-width: 375px)" />
+              <source srcset="./src/assets/img/wheel768.png" type="image/png" media="(max-width: 768px)" />
+              <source srcset="./src/assets/img/wheel.png" type="image/png" />
+              <img src="./src/assets/img/wheel.png" alt="an image of a wheel" />
+            </picture>
+            <div class="wheel__glow glow-1">
+              <img src="./src/assets/icons/glow.png" alt="glow image" />
+            </div>
+            <div class="wheel__glow glow-2">
+              <img src="./src/assets/icons/glow.png" alt="glow image" />
+            </div>
+            <div class="wheel__glow glow-3">
+              <img src="./src/assets/icons/glow.png" alt="glow image" />
+            </div>
+            <div class="wheel__glow glow-4">
+              <img src="./src/assets/icons/glow.png" alt="glow image" />
+            </div>
+            <div class="wheel__glow glow-5">
+              <img src="./src/assets/icons/glow.png" alt="glow image" />
+            </div>
+            <div class="wheel__glow glow-6">
+              <img src="./src/assets/icons/glow.png" alt="glow image" />
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="wheel__button-wrap" id="wheelButtonContainer"></div>
+        <div class="footer__payments-container">
+          <ul class="footer__payments payments" id="payments-list"></ul>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
