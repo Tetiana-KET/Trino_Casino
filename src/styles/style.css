@@ -172,7 +172,8 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  background: url('../assets/img/bg.jpg') center / 100% 100% no-repeat;
+  background-color: #1e54bd;
+  background: url('../assets/img/bg.jpg') center / cover no-repeat;
 }
 
 .header__logo-wrap {
