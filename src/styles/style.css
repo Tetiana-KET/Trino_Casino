@@ -200,6 +200,7 @@ body {
 
 .wheel__glow {
   position: absolute;
+  width: 17.826087%;
   transform-origin: center center;
   animation: glow 1s infinite alternate;
 }
@@ -411,6 +412,34 @@ body {
     overflow: hidden;
   }
 
+  .wheel__glow {
+    width: 19%;
+  }
+  .glow-1 {
+    top: 29%;
+    left: 67%;
+  }
+
+  .glow-2 {
+    top: 47.5%;
+    left: 72.5%;
+  }
+
+  .glow-3 {
+    top: 33%;
+    right: 76.5%;
+  }
+
+  .glow-4 {
+    top: 28%;
+    right: 52%;
+  }
+
+  .glow-5 {
+    top: 69%;
+    right: 57%;
+  }
+
   .wheel__arrow-wrap {
     max-width: 18.6%;
     top: 13%;
@@ -478,6 +507,10 @@ body {
     max-width: 91%;
     margin-top: 6%;
     margin-left: 2%;
+  }
+
+  .wheel__glow {
+    width: 20%;
   }
 
   .wheel__arrow-wrap {
